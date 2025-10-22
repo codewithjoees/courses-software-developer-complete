@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: playwriteus;
+        src: url(assets/font/play-write-us-modern/PlaywriteUSModern-Regular.ttf);
+      }
+      .playwriteus {
+        font-family: playwriteus;
+      }
+      @font-face {
+        font-family: unbounded;
+        src: url(assets/font/unbounded/Unbounded-Regular.ttf);
+      }
+      * {
+        font-family: unbounded;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top bar -->
+    <nav class="bg-[#0029A6] w-full z-10 fixed top-0">
+      <div class="m-auto flex items-center justify-between w-[850px] h-[60px]">
+        <h1 class="playwriteus text-2xl font-bold text-white">
+          Joe - Commerce
+        </h1>
+        <!-- navigation -->
+        <ul class="flex items-center gap-4">
+          <li>
+            <a href="#user" class="flex items-center gap-2 text-white">
+              <i class="material-icons">person</i>
+              <span class="text-[12px]">Josse Surya Pinem</span>
+            </a>
+          </li>
+          <li>
+            <a href="#notification" class="flex items-center gap-2 text-white">
+              <i class="material-icons">notifications</i>
+            </a>
+          </li>
+          <li>
+            <a href="#carts" class="flex items-center gap-2 text-white">
+              <i class="material-icons">local_grocery_store</i>
+            </a>
+          </li>
+          <li>
+            <a href="#logout" class="flex items-center gap-2 text-white">
+              <i class="material-icons">exit_to_app</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- banner -->
+    <section
+      class="m-auto grid grid-rows-2 grid-cols-5 w-[800px] h-[280px] mt-[90px] gap-4"
+    >
+      <!-- recommended only for you-->
+      <div
+        class="row-start-1 row-end-3 col-start-1 col-end-3 bg-[url(assets/img/banner.png)] bg-center bg-cover relative"
+      >
+        <div
+          class="absolute bottom-0 bg-black/60 h-[60px] w-full flex items-center p-3"
+        >
+          <h1 class="text-white font-semibold">Recommended Only For You</h1>
+        </div>
+      </div>
+      <!-- best seller  -->
+      <div
+        class="row-start-1 row-end-3 col-start-3 col-end-4 bg-[url(assets/img/banner-1.png)] bg-center bg-cover relative"
+      >
+        <div
+          class="absolute bottom-0 bg-black/60 h-[60px] w-full flex items-center p-3"
+        >
+          <h1 class="text-sm text-white font-semibold">Best Seller 2025</h1>
+        </div>
+      </div>
+      <!-- long sleeved t shirt -->
+      <div
+        class="bg-red-500 row-start-1 row-end-2 col-start-4 col-end-5 bg-[url(assets/img/banner-2.png)] bg-center bg-cover relative"
+      >
+        <div
+          class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
+        >
+          <h1 class="text-sm text-white font-semibold">Long Sleeved T-Shirt</h1>
+        </div>
+      </div>
+      <!-- sweater -->
+      <div
+        class="bg-red-500 row-start-2 row-end-3 col-start-4 col-end-5 bg-[url(assets/img/banner-3.png)] bg-center bg-cover relative"
+      >
+        <div
+          class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
+        >
+          <h1 class="text-sm text-white font-semibold">Sweater</h1>
+        </div>
+      </div>
+      <!-- shoes -->
+      <div
+        class="bg-red-500 row-start-1 row-end-2 col-start-5 col-end-6 bg-[url(assets/img/banner-4.png)] bg-center bg-cover relative"
+      >
+        <div
+          class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
+        >
+          <h1 class="text-sm text-white font-semibold">Shoes</h1>
+        </div>
+      </div>
+      <!-- shirt -->
+      <div
+        class="bg-red-500 row-start-2 row-end-3 col-start-5 col-end-6 bg-[url(assets/img/banner-5.png)] bg-center bg-cover relative"
+      >
+        <div
+          class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
+        >
+          <h1 class="text-sm text-white font-semibold">T-Shirt</h1>
+        </div>
+      </div>
+    </section>
+    <!-- search -->
+    <section class="m-auto my-8 w-[800px]">
+      <label for="search" class="block text-xl mb-3">Search :</label>
+      <div class="flex items-center">
+        <input
+          type="text"
+          id="search"
+          class="border p-1 ps-2 text-[15px] w-[600px] shadow-lg h-[40px]"
+          placeholder="input the keyword product......"
+        />
+        <button
+          class="bg-[#0029A6] w-[45px] h-[35px] flex rounded-r-[8px] shadow-lg"
+        >
+          <i class="material-icons text-white m-auto">search</i>
+        </button>
+      </div>
+    </section>
+    <!-- product  -->
+    <section class="m-auto my-6 w-[800px] grid grid-cols-4 gap-3 mb-12">
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$10.00</figcaption>
+      </figure>
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product-1.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product - 1</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$10.00</figcaption>
+      </figure>
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product-2.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product - 1</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$12.00</figcaption>
+      </figure>
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product-3.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product - 3</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$12.00</figcaption>
+      </figure>
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$10.00</figcaption>
+      </figure>
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product-1.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product - 1</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$10.00</figcaption>
+      </figure>
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product-2.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product - 1</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$12.00</figcaption>
+      </figure>
+      <figure class="duration-300 ease-in hover:scale-[1.2] cursor-pointer">
+        <img src="./assets/img/product-3.png" alt="" class="rounded-lg mb-2" />
+        <figcaption class="mb-1">Product - 3</figcaption>
+        <figcaption class="text-[12px] text-[#0029A6]">$12.00</figcaption>
+      </figure>
+    </section>
+    <!-- pagination -->
+    <nav class="flex flex-col my-6 mb-12">
+      <p class="text-center text-[12px] mb-2">Showing 1 to 8 of 24 Products</p>
+      <ul class="m-auto flex gap-2">
+        <li
+          class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+        >
+          <i class="material-icons">skip_previous</i>
+        </li>
+        <li
+          class="h-[45px] w-[45px] rounded-full shadow flex justify-center items-center bg-[#0029A6] text-white"
+        >
+          1
+        </li>
+        <li
+          class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+        >
+          2
+        </li>
+        <li
+          class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+        >
+          3
+        </li>
+        <li
+          class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+        >
+          <i class="material-icons">skip_next</i>
+        </li>
+      </ul>
+    </nav>
+    <!-- bottom -->
+    <nav class="bg-[#0029A6] w-full">
+      <div class="w-[800px] py-6 m-auto grid grid-cols-4 gap-5">
+        <ul>
+          <li>
+            <h1 class="playwriteus text-xl font-bold text-white mb-3">
+              Joe - Commerce
+            </h1>
+          </li>
+          <!-- location -->
+          <li class="flex items-center gap-2 mb-1">
+            <i class="material-icons text-white text-lg">room</i>
+            <h2 class="text-white text-[11px]">
+              Medan, North Sumatera, Indonesia
+            </h2>
+          </li>
+          <!-- 	phone_in_talk -->
+          <li class="flex items-center gap-2 mb-1">
+            <i class="material-icons text-white text-lg">phone_in_talk</i>
+            <h2 class="text-white text-[11px]">+6289524087023</h2>
+          </li>
+          <!-- 	email -->
+          <li class="flex items-center gap-2 mb-1">
+            <i class="material-icons text-white text-lg">email</i>
+            <h2 class="text-white text-[11px]">pinemjosse@gmail.com</h2>
+          </li>
+        </ul>
+        <ul>
+          <li class="mb-5">
+            <a href="#aboutus" class="block text-white text-[13px] text-center"
+              >About Us</a
+            >
+          </li>
+          <li class="mb-5">
+            <a
+              href="#contactus"
+              class="block text-white text-[13px] text-center"
+              >Contact Us</a
+            >
+          </li>
+          <li class="mb-5">
+            <a href="#legal" class="block text-white text-[13px] text-center"
+              >Legal</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li class="mb-5">
+            <a href="#ourteam" class="block text-white text-[13px] text-center"
+              >Our Team</a
+            >
+          </li>
+          <li class="mb-5">
+            <a href="#blog" class="block text-white text-[13px] text-center"
+              >Blog</a
+            >
+          </li>
+          <li class="mb-5">
+            <a href="#policy" class="block text-white text-[13px] text-center"
+              >Policy</a
+            >
+          </li>
+        </ul>
+        <!-- donwload apps -->
+        <div>
+          <h1 class="text-white mb-2">Download Apps :</h1>
+          <ul>
+            <li class="mb-2">
+              <a href="#google-play-store">
+                <img
+                  src="./assets/img/download-ios.png"
+                  alt=""
+                  class="w-[145px] h-[50px]"
+              /></a>
+            </li>
+            <li>
+              <a href="#google-play-store">
+                <img
+                  src="./assets/img/download-android.png"
+                  alt=""
+                  class="w-[145px] h-[50px]"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
