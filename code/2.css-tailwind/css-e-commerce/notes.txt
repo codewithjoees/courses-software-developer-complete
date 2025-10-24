@@ -1,0 +1,2 @@
+color : #0029A6
+icons : person, notifications, local_grocery_store, exit_to_app, skip_previous, skip_next, room, phone_in_talk, email, navigate_before, forum, star,expand_more

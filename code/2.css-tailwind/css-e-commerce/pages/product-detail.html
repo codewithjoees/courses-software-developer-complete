@@ -31,8 +31,10 @@
     <nav class="bg-[#0029A6] w-full z-10 fixed top-0">
       <!-- only size device mobile -->
       <div class="block lg:hidden">
-        <div class="h-[60px] flex justify-between items-center gap-3 px-3">
-          <h1 class="playwriteus font-bold text-white">Joe - Commerce</h1>
+        <div class="px-3 py-5 flex justify-between items-center gap-3">
+          <div class="text-xl playwriteus font-bold text-white">
+            Joe - Commerce
+          </div>
           <i class="material-icons text-white cursor-pointer" id="menu-trigger"
             >reorder</i
           >
@@ -42,42 +44,40 @@
           <li class="mb-2">
             <a href="#user" class="flex items-center gap-2">
               <i class="material-icons">person</i>
-              <span class="text-[12px]">Josse Surya Pinem</span>
+              <span class="text-[13px]">Josse Surya Pinem</span>
             </a>
           </li>
           <li class="mb-2">
-            <a href="#notification" class="flex items-center gap-2">
+            <a href="#notification" class="flex items-center gap-3">
               <i class="material-icons">notifications</i>
-              <span class="text-[12px]">Notifications</span>
+              <span class="text-[13px]">Notifications</span>
             </a>
           </li>
           <li class="mb-2">
-            <a href="#carts" class="flex items-center gap-2">
+            <a href="#carts" class="flex items-center gap-3">
               <i class="material-icons">local_grocery_store</i>
-              <span class="text-[12px]">Cart</span>
+              <span class="text-[13px]">Cart</span>
             </a>
           </li>
           <li class="mb-2">
-            <a href="#logout" class="flex items-center gap-2">
+            <a href="#logout" class="flex items-center gap-3">
               <i class="material-icons">exit_to_app</i>
-              <span class="text-[12px]">Logout</span>
+              <span class="text-[13px]">Logout</span>
             </a>
           </li>
         </ul>
       </div>
       <!-- devices size more mobile -->
       <div class="hidden lg:block">
-        <div
-          class="h-[60px] w-[850px] m-auto flex items-center justify-between"
-        >
-          <h1 class="lg:text-2xl playwriteus font-bold text-white">
+        <div class="py-5 w-[1000px] m-auto flex items-center justify-between">
+          <div class="text-3xl playwriteus font-bold text-white">
             Joe - Commerce
-          </h1>
+          </div>
           <ul class="lg:flex items-center gap-4">
             <li>
               <a href="#user" class="flex items-center gap-2 text-white">
                 <i class="material-icons">person</i>
-                <span class="text-[12px]">Josse Surya Pinem</span>
+                <span>Josse Surya Pinem</span>
               </a>
             </li>
             <li>
@@ -103,11 +103,13 @@
       </div>
     </nav>
     <!-- body -->
-    <section class="w-full lg:w-[750px] px-2 lg:px-0 lg:mx-auto mt-[80px]">
+    <section
+      class="w-full lg:w-[900px] px-2 lg:px-0 lg:mx-auto mt-[85px] lg:mt-[100px]"
+    >
       <!-- back  -->
-      <a href="./../index.html" class="flex items-center gap-3 mb-4">
-        <i class="material-icons text-lg">navigate_before</i>
-        <span>Back </span>
+      <a href="./../index.html" class="flex items-center gap-3 mb-5">
+        <i class="material-icons">navigate_before</i>
+        <div class="text-lg">Back</div>
       </a>
       <!-- official-store -->
       <div class="flex justify-between mb-6">
@@ -127,7 +129,7 @@
         <i class="material-icons text-3xl">forum</i>
       </div>
       <!-- card-product -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
         <img
           src="./../assets/img/product-detail.png"
           alt="product-detail-1"
@@ -137,7 +139,7 @@
           <!-- title -->
           <div class="text-xl lg:text-3xl font-bold mb-2">Product</div>
           <!-- information -->
-          <div class="text-[11px] lg:text-sm text-slate-500 mb-2 lg:mb-5">
+          <div class="text-sm text-slate-500 mb-2 mb-5">
             Outfit | 9K++ Sold | 10K++ Comments
           </div>
           <!-- price -->
@@ -147,9 +149,9 @@
             $10.00
           </div>
           <!-- description -->
-          <div class="mb-3">
-            <div class="mb-2 text-sm">Description :</div>
-            <div class="text-[11px] lg:text-sm text-justify text-slate-500">
+          <div class="mb-6">
+            <div class="mb-2">Description :</div>
+            <div class="text-justify text-slate-600">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
               nesciunt odit velit quibusdam. Ad aliquid harum expedita
               quibusdam, magnam neque accusantium autem distinctio quisquam,
@@ -167,9 +169,9 @@
       </div>
       <!-- comments -->
       <div class="mb-2">
-        <div class="mb-3">Comments :</div>
+        <div class="mb-4 text-lg">Comments :</div>
         <div class="mb-3">
-          <div class="block lg:hidden text-[7px] text-right">
+          <div class="block lg:hidden text-right text-[11px]">
             22/11/2025, 11:11
           </div>
           <div class="flex justify-between mb-4">
@@ -180,26 +182,26 @@
                 class="h-[55px] w-[55px]"
               />
               <div>
-                <div class="text-sm">John Doe</div>
+                <div class="mb-1">John Doe</div>
                 <div>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-[16px]">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons">star</i>
                 </div>
-                <div class="text-[11px]">Awesome !</div>
+                <div>Awesome !</div>
               </div>
             </div>
             <div class="hidden lg:block">
-              <div class="text-[9px] lg:text-[11px] mb-1">22 November 2025</div>
-              <div class="text-[8px] lg:text-[9px]">11:11</div>
+              <div class="mb-1 text-[12px]">22 November 2025</div>
+              <div class="text-[10px] text-right">11:11</div>
             </div>
           </div>
           <hr />
         </div>
         <div class="mb-3">
-          <div class="block lg:hidden text-[7px] text-right">
+          <div class="block lg:hidden text-right text-[11px]">
             22/11/2025, 11:11
           </div>
           <div class="flex justify-between mb-4">
@@ -210,26 +212,26 @@
                 class="h-[55px] w-[55px]"
               />
               <div>
-                <div class="text-sm">Josh Pinem</div>
+                <div class="mb-1">John Andrew</div>
                 <div>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
                 </div>
-                <div class="text-[11px]">Great, Awesome !</div>
+                <div>Great !, I'll Buy again</div>
               </div>
             </div>
             <div class="hidden lg:block">
-              <div class="text-[9px] lg:text-[11px] mb-1">22 November 2025</div>
-              <div class="text-[8px] lg:text-[9px]">11:11</div>
+              <div class="mb-1 text-[12px]">22 November 2025</div>
+              <div class="text-[10px] text-right">11:11</div>
             </div>
           </div>
           <hr />
         </div>
         <div class="mb-3">
-          <div class="block lg:hidden text-[7px] text-right">
+          <div class="block lg:hidden text-right text-[11px]">
             22/11/2025, 11:11
           </div>
           <div class="flex justify-between mb-4">
@@ -240,20 +242,20 @@
                 class="h-[55px] w-[55px]"
               />
               <div>
-                <div class="text-sm">Joee Andrew</div>
+                <div class="mb-1">John Doe</div>
                 <div>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-yellow-400 text-[16px]">star</i>
-                  <i class="material-icons text-[16px]">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons text-yellow-400">star</i>
+                  <i class="material-icons">star</i>
                 </div>
-                <div class="text-[11px]">Great, Awesome !</div>
+                <div>Awesome !</div>
               </div>
             </div>
             <div class="hidden lg:block">
-              <div class="text-[9px] lg:text-[11px] mb-1">22 November 2025</div>
-              <div class="text-[8px] lg:text-[9px]">11:11</div>
+              <div class="mb-1 text-[12px]">22 November 2025</div>
+              <div class="text-[10px] text-right">11:11</div>
             </div>
           </div>
           <hr />
@@ -274,72 +276,64 @@
     <!-- bottom -->
     <nav class="bg-[#0029A6] w-full">
       <div
-        class="px-3 lg:px-0 lg:w-[800px] py-6 m-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
+        class="px-3 lg:px-0 lg:w-[1000px] py-9 m-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
       >
         <ul>
-          <li>
-            <h1 class="playwriteus text-xl font-bold text-white mb-3">
-              Joe - Commerce
-            </h1>
+          <li class="playwriteus text-2xl font-bold text-white mb-4">
+            Joe - Commerce
           </li>
           <!-- location -->
-          <li class="flex items-center gap-2 mb-1">
-            <i class="material-icons text-white text-lg">room</i>
-            <h2 class="text-white text-[11px]">
+          <li class="flex items-center gap-3 mb-3">
+            <i class="material-icons text-white">room</i>
+            <div class="text-white text-[13px]">
               Medan, North Sumatera, Indonesia
-            </h2>
+            </div>
           </li>
           <!-- 	phone_in_talk -->
-          <li class="flex items-center gap-2 mb-1">
-            <i class="material-icons text-white text-lg">phone_in_talk</i>
-            <h2 class="text-white text-[11px]">+6289524087023</h2>
+          <li class="flex items-center gap-3 mb-3">
+            <i class="material-icons text-white">phone_in_talk</i>
+            <div class="text-white text-[13px]">+6289524087023</div>
           </li>
           <!-- 	email -->
-          <li class="flex items-center gap-2 mb-1">
-            <i class="material-icons text-white text-lg">email</i>
-            <h2 class="text-white text-[11px]">pinemjosse@gmail.com</h2>
+          <li class="flex items-center gap-3 mb-3">
+            <i class="material-icons text-white">email</i>
+            <div class="text-white text-[13px]">pinemjosse@gmail.com</div>
           </li>
         </ul>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-8">
           <ul>
             <li class="mb-5">
-              <a href="#aboutus" class="block text-white text-[13px]"
-                >About Us</a
-              >
+              <a href="#aboutus" class="block text-white">About Us</a>
             </li>
             <li class="mb-5">
-              <a href="#contactus" class="block text-white text-[13px]"
-                >Contact Us</a
-              >
+              <a href="#contactus" class="block text-white">Contact Us</a>
             </li>
             <li class="mb-5">
-              <a href="#legal" class="block text-white text-[13px]">Legal</a>
+              <a href="#legal" class="block text-white">Legal</a>
             </li>
           </ul>
           <ul>
             <li class="mb-5">
-              <a href="#ourteam" class="block text-white text-[13px]"
-                >Our Team</a
-              >
+              <a href="#ourteam" class="block text-white">Our Team</a>
             </li>
             <li class="mb-5">
-              <a href="#blog" class="block text-white text-[13px]">Blog</a>
+              <a href="#blog" class="block text-white">Blog</a>
             </li>
             <li class="mb-5">
-              <a href="#policy" class="block text-white text-[13px]">Policy</a>
+              <a href="#policy" class="block text-white">Policy</a>
             </li>
           </ul>
         </div>
         <!-- download apps -->
         <div>
-          <h1 class="text-white mb-2">Download Apps :</h1>
+          <div class="text-white mb-4 lg:text-center">Download Apps :</div>
           <ul>
             <li class="mb-2">
               <a href="#app-store">
                 <img
                   src="./../assets/img/download-ios.png"
                   alt=""
-                  class="w-[155px] h-[45px]"
+                  class="w-[155px] h-[45px] lg:m-auto"
               /></a>
             </li>
             <li>
@@ -347,7 +341,7 @@
                 <img
                   src="./../assets/img/download-android.png"
                   alt=""
-                  class="w-[155px] h-[45px]"
+                  class="w-[155px] h-[45px] lg:m-auto"
               /></a>
             </li>
           </ul>

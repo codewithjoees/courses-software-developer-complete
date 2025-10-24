@@ -31,8 +31,10 @@
     <nav class="bg-[#0029A6] w-full z-10 fixed top-0">
       <!-- only size device mobile -->
       <div class="block lg:hidden">
-        <div class="h-[60px] flex justify-between items-center gap-3 px-3">
-          <h1 class="playwriteus font-bold text-white">Joe - Commerce</h1>
+        <div class="px-3 py-5 flex justify-between items-center gap-3">
+          <div class="text-xl playwriteus font-bold text-white">
+            Joe - Commerce
+          </div>
           <i class="material-icons text-white cursor-pointer" id="menu-trigger"
             >reorder</i
           >
@@ -42,42 +44,40 @@
           <li class="mb-2">
             <a href="#user" class="flex items-center gap-2">
               <i class="material-icons">person</i>
-              <span class="text-[12px]">Josse Surya Pinem</span>
+              <span class="text-[13px]">Josse Surya Pinem</span>
             </a>
           </li>
           <li class="mb-2">
-            <a href="#notification" class="flex items-center gap-2">
+            <a href="#notification" class="flex items-center gap-3">
               <i class="material-icons">notifications</i>
-              <span class="text-[12px]">Notifications</span>
+              <span class="text-[13px]">Notifications</span>
             </a>
           </li>
           <li class="mb-2">
-            <a href="#carts" class="flex items-center gap-2">
+            <a href="#carts" class="flex items-center gap-3">
               <i class="material-icons">local_grocery_store</i>
-              <span class="text-[12px]">Cart</span>
+              <span class="text-[13px]">Cart</span>
             </a>
           </li>
           <li class="mb-2">
-            <a href="#logout" class="flex items-center gap-2">
+            <a href="#logout" class="flex items-center gap-3">
               <i class="material-icons">exit_to_app</i>
-              <span class="text-[12px]">Logout</span>
+              <span class="text-[13px]">Logout</span>
             </a>
           </li>
         </ul>
       </div>
       <!-- devices size more mobile -->
       <div class="hidden lg:block">
-        <div
-          class="h-[60px] w-[850px] m-auto flex items-center justify-between"
-        >
-          <h1 class="lg:text-2xl playwriteus font-bold text-white">
+        <div class="py-5 w-[1000px] m-auto flex items-center justify-between">
+          <div class="text-3xl playwriteus font-bold text-white">
             Joe - Commerce
-          </h1>
+          </div>
           <ul class="lg:flex items-center gap-4">
             <li>
               <a href="#user" class="flex items-center gap-2 text-white">
                 <i class="material-icons">person</i>
-                <span class="text-[12px]">Josse Surya Pinem</span>
+                <span>Josse Surya Pinem</span>
               </a>
             </li>
             <li>
@@ -103,29 +103,35 @@
       </div>
     </nav>
     <!-- center -->
-    <section class="w-full lg:w-[800px] m-auto mt-[60px] lg:mt-[80px]">
+    <section class="w-full lg:w-[1000px] m-auto mt-[60px]">
       <!-- banner -->
       <section class="mb-5">
         <!-- only size device mobile -->
         <div
-          class="block lg:hidden h-[200px] bg-[url(assets/img/banner.png)] bg-center bg-cover relative"
+          class="block lg:hidden h-[300px] bg-[url(assets/img/banner.png)] bg-center bg-cover relative"
         >
           <div
-            class="absolute bottom-0 bg-black/60 w-full flex items-center p-3"
+            class="absolute bottom-0 bg-black/60 w-full flex items-center px-3 py-5"
           >
-            <h1 class="text-white font-semibold">Recommended Only For You</h1>
+            <div class="text-white font-semibold text-xl">
+              Recommended Only For You
+            </div>
           </div>
         </div>
         <!-- only size more device mobile -->
-        <div class="hidden lg:grid grid-rows-2 grid-cols-5 h-[280px] gap-4">
+        <div
+          class="hidden lg:grid grid-rows-2 grid-cols-5 h-[350px] gap-4 pt-[40px]"
+        >
           <!-- recommended only for you-->
           <div
             class="row-start-1 row-end-3 col-start-1 col-end-3 bg-[url(assets/img/banner.png)] bg-center bg-cover relative"
           >
             <div
-              class="absolute bottom-0 bg-black/60 h-[60px] w-full flex items-center p-3"
+              class="absolute bottom-0 bg-black/60 w-full flex items-center py-5 px-4"
             >
-              <h1 class="text-white font-semibold">Recommended Only For You</h1>
+              <div class="text-lg text-white font-semibold">
+                Recommended Only For You
+              </div>
             </div>
           </div>
           <!-- best seller  -->
@@ -184,27 +190,25 @@
       </section>
       <!-- search -->
       <section class="mb-6 px-2 lg:p-0 lg:w-[800px]">
-        <label for="search" class="block text-[16px] lg:text-xl mb-3"
+        <label for="search" class="block text-[20px] lg:text-2xl mb-3"
           >Search :</label
         >
         <div class="flex items-center">
           <input
             type="text"
             id="search"
-            class="border p-1 ps-2 text-[11px] lg:text-[15px] w-[85%] lg:w-[600px] shadow-lg h-[40px]"
+            class="border p-1 ps-3 text-[16px] lg:text-[18px] w-[85%] lg:w-[600px] shadow-lg h-[45px]"
             placeholder="input the keyword product......"
           />
           <button
-            class="bg-[#0029A6] w-[15%] lg:w-[45px] h-[35px] flex rounded-r-[8px] shadow-lg"
+            class="bg-[#0029A6] w-[15%] lg:w-[55px] h-[42px] flex rounded-r-[8px] shadow-lg"
           >
             <i class="material-icons text-white m-auto">search</i>
           </button>
         </div>
       </section>
       <!-- product  -->
-      <section
-        class="mb-6 px-2 lg:p-0 lg:w-[800px] grid grid-cols-2 lg:grid-cols-4 gap-4"
-      >
+      <section class="mb-6 px-2 lg:p-0 grid grid-cols-2 lg:grid-cols-4 gap-4">
         <a
           href="./pages/product-detail.html"
           class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
@@ -215,8 +219,8 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">Product</figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[18px] lg:text-[19px]">Product</figcaption>
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $10.00
             </figcaption>
           </figure>
@@ -231,10 +235,10 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">
+            <figcaption class="text-[18px] lg:text-[19px]">
               Product - 1
             </figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $11.00
             </figcaption>
           </figure>
@@ -249,10 +253,10 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">
+            <figcaption class="text-[18px] lg:text-[19px]">
               Product - 2
             </figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $12.00
             </figcaption>
           </figure>
@@ -267,10 +271,10 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">
+            <figcaption class="text-[18px] lg:text-[19px]">
               Product - 3
             </figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $13.00
             </figcaption>
           </figure>
@@ -285,10 +289,10 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">
+            <figcaption class="text-[18px] lg:text-[19px]">
               Product - 3
             </figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $3.00
             </figcaption>
           </figure>
@@ -303,10 +307,10 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">
+            <figcaption class="text-[18px] lg:text-[19px]">
               Product - 4
             </figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $40.00
             </figcaption>
           </figure>
@@ -321,8 +325,8 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">Product</figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[18px] lg:text-[19px]">Product</figcaption>
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $10.00
             </figcaption>
           </figure>
@@ -337,8 +341,8 @@
               alt=""
               class="rounded-lg mb-2"
             />
-            <figcaption class="text-[15px] lg:text-[17px]">Product</figcaption>
-            <figcaption class="text-[10px] text-[#0029A6] lg:text-[12px]">
+            <figcaption class="text-[18px] lg:text-[19px]">Product</figcaption>
+            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
               $10.00
             </figcaption>
           </figure>
@@ -346,34 +350,34 @@
       </section>
       <!-- pagination -->
       <nav class="flex flex-col my-6 mb-12">
-        <p class="text-center text-[10px] lg:text-[12px] mb-2">
+        <p class="text-center text-[14px] lg:text-[16px] lg:text-[18px] mb-3">
           Showing 1 to 8 of 24 Products
         </p>
         <ul class="m-auto flex gap-2">
           <li
-            class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center"
           >
-            <i class="material-icons">skip_previous</i>
+            <i class="material-icons text-3xl">skip_previous</i>
           </li>
           <li
-            class="h-[45px] w-[45px] rounded-full shadow flex justify-center items-center bg-[#0029A6] text-white"
+            class="h-[55px] w-[55px] rounded-full shadow flex justify-center items-center bg-[#0029A6] text-white text-xl"
           >
             1
           </li>
           <li
-            class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center text-xl"
           >
             2
           </li>
           <li
-            class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center text-xl"
           >
             3
           </li>
           <li
-            class="h-[45px] w-[45px] rounded-full bg-white shadow flex justify-center items-center"
+            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center"
           >
-            <i class="material-icons">skip_next</i>
+            <i class="material-icons text-2xl">skip_next</i>
           </li>
         </ul>
       </nav>
@@ -381,72 +385,64 @@
     <!-- bottom -->
     <nav class="bg-[#0029A6] w-full">
       <div
-        class="px-3 lg:px-0 lg:w-[800px] py-6 m-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
+        class="px-3 lg:px-0 lg:w-[1000px] py-9 m-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
       >
         <ul>
-          <li>
-            <h1 class="playwriteus text-xl font-bold text-white mb-3">
-              Joe - Commerce
-            </h1>
+          <li class="playwriteus text-2xl font-bold text-white mb-4">
+            Joe - Commerce
           </li>
           <!-- location -->
-          <li class="flex items-center gap-2 mb-1">
-            <i class="material-icons text-white text-lg">room</i>
-            <h2 class="text-white text-[11px]">
+          <li class="flex items-center gap-3 mb-3">
+            <i class="material-icons text-white">room</i>
+            <div class="text-white text-[13px]">
               Medan, North Sumatera, Indonesia
-            </h2>
+            </div>
           </li>
           <!-- 	phone_in_talk -->
-          <li class="flex items-center gap-2 mb-1">
-            <i class="material-icons text-white text-lg">phone_in_talk</i>
-            <h2 class="text-white text-[11px]">+6289524087023</h2>
+          <li class="flex items-center gap-3 mb-3">
+            <i class="material-icons text-white">phone_in_talk</i>
+            <div class="text-white text-[13px]">+6289524087023</div>
           </li>
           <!-- 	email -->
-          <li class="flex items-center gap-2 mb-1">
-            <i class="material-icons text-white text-lg">email</i>
-            <h2 class="text-white text-[11px]">pinemjosse@gmail.com</h2>
+          <li class="flex items-center gap-3 mb-3">
+            <i class="material-icons text-white">email</i>
+            <div class="text-white text-[13px]">pinemjosse@gmail.com</div>
           </li>
         </ul>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-8">
           <ul>
             <li class="mb-5">
-              <a href="#aboutus" class="block text-white text-[12px]"
-                >About Us</a
-              >
+              <a href="#aboutus" class="block text-white">About Us</a>
             </li>
             <li class="mb-5">
-              <a href="#contactus" class="block text-white text-[12px]"
-                >Contact Us</a
-              >
+              <a href="#contactus" class="block text-white">Contact Us</a>
             </li>
             <li class="mb-5">
-              <a href="#legal" class="block text-white text-[12px]">Legal</a>
+              <a href="#legal" class="block text-white">Legal</a>
             </li>
           </ul>
           <ul>
             <li class="mb-5">
-              <a href="#ourteam" class="block text-white text-[12px]"
-                >Our Team</a
-              >
+              <a href="#ourteam" class="block text-white">Our Team</a>
             </li>
             <li class="mb-5">
-              <a href="#blog" class="block text-white text-[12px]">Blog</a>
+              <a href="#blog" class="block text-white">Blog</a>
             </li>
             <li class="mb-5">
-              <a href="#policy" class="block text-white text-[12px]">Policy</a>
+              <a href="#policy" class="block text-white">Policy</a>
             </li>
           </ul>
         </div>
         <!-- download apps -->
         <div>
-          <h1 class="text-white mb-2">Download Apps :</h1>
+          <div class="text-white mb-4 lg:text-center">Download Apps :</div>
           <ul>
             <li class="mb-2">
               <a href="#app-store">
                 <img
                   src="./assets/img/download-ios.png"
                   alt=""
-                  class="w-[155px] h-[45px]"
+                  class="w-[155px] h-[45px] lg:m-auto"
               /></a>
             </li>
             <li>
@@ -454,7 +450,7 @@
                 <img
                   src="./assets/img/download-android.png"
                   alt=""
-                  class="w-[155px] h-[45px]"
+                  class="w-[155px] h-[45px] lg:m-auto"
               /></a>
             </li>
           </ul>
