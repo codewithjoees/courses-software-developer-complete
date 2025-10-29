@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- this is tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @font-face {
         font-family: playwriteus;
-        src: url(./../assets/font/play-write-us-modern/PlaywriteUSModern-Regular.ttf);
+        src: url(../assets/font/play-write-us-modern/PlaywriteUSModern-Regular.ttf);
       }
       .playwriteus {
         font-family: playwriteus;
       }
       @font-face {
         font-family: unbounded;
-        src: url(./../assets/font/unbounded/Unbounded-Regular.ttf);
+        src: url(../assets/font/unbounded/Unbounded-Regular.ttf);
       }
       * {
         font-family: unbounded;
@@ -27,7 +27,7 @@
     </style>
   </head>
   <body>
-    <!-- top bar -->
+    <!-- top navigation -->
     <nav class="bg-[#0029A6] w-full z-10 fixed top-0">
       <!-- only size device mobile -->
       <div class="block lg:hidden">
@@ -102,252 +102,222 @@
         </div>
       </div>
     </nav>
-    <!-- body -->
-    <section
-      class="w-full lg:w-[900px] px-2 lg:px-0 lg:mx-auto mt-[85px] lg:mt-[100px]"
+    <!-- back navigation -->
+    <div
+      class="w-full lg:w-[1000px] mt-[90px] mb-5 lg:mt-[95px] lg:m-auto my-5 px-2 lg:px-0"
     >
-      <!-- back  -->
-      <a href="./../index.html" class="flex items-center gap-3 mb-5">
+      <a href="./../index.html" class="flex gap-3">
         <i class="material-icons">navigate_before</i>
-        <div class="text-lg">Back</div>
+        <div>Back</div>
       </a>
-      <!-- official-store -->
-      <div class="flex justify-between mb-6">
-        <!-- section-1 -->
-        <div class="flex gap-4">
+    </div>
+    <!-- official store -->
+    <div class="w-full lg:w-[1000px] lg:m-auto !my-5 px-2 lg:px-0">
+      <div class="flex justify-between">
+        <div class="flex gap-3">
           <img
             src="./../assets/img/official-store.png"
             alt=""
-            class="w-[50px] h-[50px]"
+            class="w-[60px] h-[60px]"
           />
           <div>
-            <h1>Official Store</h1>
-            <h2 class="text-[12px]">Medan, Indonesia</h2>
+            <div class="mb-1">Official Store</div>
+            <div class="text-[14px]">Medan, Indonesian</div>
           </div>
         </div>
-        <!-- section-2 -->
-        <i class="material-icons text-3xl">forum</i>
+        <i class="material-icons !text-[32px]">forum</i>
       </div>
-      <!-- card-product -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
-        <img
-          src="./../assets/img/product-detail.png"
-          alt="product-detail-1"
-          class="w-full h-auto"
-        />
+    </div>
+    <!-- product img -->
+    <div class="w-full lg:w-[1000px] lg:m-auto !my-5 px-2 lg:px-0">
+      <div class="grid gap-5 grid-cols-1 lg:grid-cols-2">
         <div>
-          <!-- title -->
-          <div class="text-xl lg:text-3xl font-bold mb-2">Product</div>
-          <!-- information -->
-          <div class="text-sm text-slate-500 mb-2 mb-5">
-            Outfit | 9K++ Sold | 10K++ Comments
+          <img
+            src="./../assets/img/product-detail.png"
+            alt=""
+            class="w-full h-auto"
+          />
+        </div>
+        <div>
+          <div class="text-[22px] lg:text-[28px] mb-2">Product</div>
+          <div class="mb-2 text-slate-600">
+            <span>Outfit | </span>
+            <span>9++ Sold | </span>
+            <span>90++ Comments | </span>
           </div>
-          <!-- price -->
-          <div
-            class="text-xl lg:text-4xl text-[#0029A6] font-extrabold mb-2 lg:mb-4"
-          >
-            $10.00
+          <div class="text-[32px] lg:text-[42px] text-[#0029A6] mb-3">
+            $ 10.00
           </div>
-          <!-- description -->
-          <div class="mb-6">
-            <div class="mb-2">Description :</div>
-            <div class="text-justify text-slate-600">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-              nesciunt odit velit quibusdam. Ad aliquid harum expedita
-              quibusdam, magnam neque accusantium autem distinctio quisquam,
-              sint veritatis unde corrupti odit laborum.
-            </div>
+          <div class="mb-1 text-[18px]">Description :</div>
+          <div class="text-[16px] text-justify mb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            cupiditate vero voluptate odit eaque delectus maiores architecto
+            dignissimos quidem blanditiis quae magnam, reiciendis veniam esse
+            beatae, eveniet quasi tempore perferendis?
           </div>
-          <!-- button buy -->
           <button
-            class="bg-[#0029A6] text-white px-4 py-2 rounded flex items-center gap-3 duration-300 hover:scale-[1.1]"
+            class="bg-[#0029A6] text-white px-5 py-3 cursor-pointer rounded duration-300 hover:scale-120"
           >
-            <i class="material-icons text-lg">local_grocery_store</i>
-            <span>Buy</span>
+            <div class="flex items-center gap-2">
+              <i class="material-icons text-[20px]">local_grocery_store</i>
+              <div class="text-[22px]">Buy</div>
+            </div>
           </button>
         </div>
       </div>
-      <!-- comments -->
-      <div class="mb-2">
-        <div class="mb-4 text-lg">Comments :</div>
-        <div class="mb-3">
-          <div class="block lg:hidden text-right text-[11px]">
-            22/11/2025, 11:11
-          </div>
-          <div class="flex justify-between mb-4">
-            <div class="flex gap-3">
-              <img
-                src="./../assets/img/person.png"
-                alt="person-1"
-                class="h-[55px] w-[55px]"
-              />
+    </div>
+    <!-- comments -->
+    <div class="w-full lg:w-[1000px] lg:m-auto !my-5 px-2 lg:px-0">
+      <div class="text-[22px] mb-3">Comments :</div>
+      <div class="py-2">
+        <div class="text-right lg:hidden text-[11px]">10/10/2025, 11:11</div>
+        <div class="flex justify-between p-3">
+          <div class="flex gap-3">
+            <img
+              src="./../assets/img/person.png"
+              alt=""
+              class="w-[70px] h-[70px]"
+            />
+            <div>
+              <div class="text-[18px]">John Doe</div>
               <div>
-                <div class="mb-1">John Doe</div>
-                <div>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons">star</i>
-                </div>
-                <div>Awesome !</div>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons">star</i>
               </div>
-            </div>
-            <div class="hidden lg:block">
-              <div class="mb-1 text-[12px]">22 November 2025</div>
-              <div class="text-[10px] text-right">11:11</div>
+              <div>Amazing !</div>
             </div>
           </div>
-          <hr />
+          <div class="hidden lg:block">
+            <div class="text-[13px]">22 November 2025</div>
+            <div class="text-[12px]">11:00</div>
+          </div>
         </div>
-        <div class="mb-3">
-          <div class="block lg:hidden text-right text-[11px]">
-            22/11/2025, 11:11
-          </div>
-          <div class="flex justify-between mb-4">
-            <div class="flex gap-3">
-              <img
-                src="./../assets/img/person-1.png"
-                alt="person-1"
-                class="h-[55px] w-[55px]"
-              />
+        <hr class="text-slate-400" />
+      </div>
+      <div class="py-2">
+        <div class="text-right lg:hidden text-[11px]">10/10/2025, 11:11</div>
+        <div class="flex justify-between p-3">
+          <div class="flex gap-3">
+            <img
+              src="./../assets/img/person-1.png"
+              alt=""
+              class="w-[70px] h-[70px]"
+            />
+            <div>
+              <div class="text-[18px]">John Andrew</div>
               <div>
-                <div class="mb-1">John Andrew</div>
-                <div>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                </div>
-                <div>Great !, I'll Buy again</div>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
               </div>
-            </div>
-            <div class="hidden lg:block">
-              <div class="mb-1 text-[12px]">22 November 2025</div>
-              <div class="text-[10px] text-right">11:11</div>
+              <div>Great !</div>
             </div>
           </div>
-          <hr />
+          <div class="hidden lg:block">
+            <div class="text-[13px]">22 November 2025</div>
+            <div class="text-[12px]">11:00</div>
+          </div>
         </div>
-        <div class="mb-3">
-          <div class="block lg:hidden text-right text-[11px]">
-            22/11/2025, 11:11
-          </div>
-          <div class="flex justify-between mb-4">
-            <div class="flex gap-3">
-              <img
-                src="./../assets/img/person-2.png"
-                alt="person-1"
-                class="h-[55px] w-[55px]"
-              />
+        <hr class="text-slate-400" />
+      </div>
+      <div class="py-2">
+        <div class="text-right lg:hidden text-[11px]">10/10/2025, 11:11</div>
+        <div class="flex justify-between p-3">
+          <div class="flex gap-3">
+            <img
+              src="./../assets/img/person-2.png"
+              alt=""
+              class="w-[70px] h-[70px]"
+            />
+            <div>
+              <div class="text-[18px]">John Doe</div>
               <div>
-                <div class="mb-1">John Doe</div>
-                <div>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons text-yellow-400">star</i>
-                  <i class="material-icons">star</i>
-                </div>
-                <div>Awesome !</div>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons text-yellow-400">star</i>
+                <i class="material-icons">star</i>
               </div>
-            </div>
-            <div class="hidden lg:block">
-              <div class="mb-1 text-[12px]">22 November 2025</div>
-              <div class="text-[10px] text-right">11:11</div>
+              <div>Amazing and Awesome!</div>
             </div>
           </div>
-          <hr />
+          <div class="hidden lg:block">
+            <div class="text-[13px]">22 November 2025</div>
+            <div class="text-[12px]">11:00</div>
+          </div>
         </div>
-        <!-- load more -->
-        <div class="flex justify-center my-5">
-          <div class="flex flex-col items-center gap-2">
-            <div class="text-blue-600 text-[13px]">Show More</div>
-            <div
-              class="bg-blue-400 text-white flex justify-center items-center rounded"
-            >
-              <i class="material-icons">expand_more</i>
-            </div>
+        <hr class="text-slate-400" />
+      </div>
+    </div>
+    <!-- show more comments -->
+    <div class="w-full lg:w-[1000px] lg:m-auto !my-5 px-2 lg:px-0">
+      <div class="text-center text-[15px] text-blue-500 mb-2">Show More</div>
+      <div class="flex justify-center">
+        <div
+          class="bg-blue-600 text-white h-[30px] w-[30px] rounded flex justify-center items-center"
+        >
+          <i class="material-icons">expand_more</i>
+        </div>
+      </div>
+    </div>
+    <!-- bottom navigation -->
+    <section class="bg-[#0029A6]">
+      <div
+        class="w-full lg:w-[1000px] grid gap-3 grid-cols-1 lg:grid-cols-3 py-8 px-2 text-white m-auto"
+      >
+        <!-- first-column -->
+        <div>
+          <div class="text-[25px] playwriteus mb-4">Joe-Commerce</div>
+          <!-- location -->
+          <div class="flex items-center gap-2 mb-3">
+            <i class="material-icons">room</i>
+            <div class="text-[14px]">Medan, North Sumatera, Indonesian</div>
           </div>
+          <!-- number phone -->
+          <div class="flex items-center gap-2 mb-3">
+            <i class="material-icons">phone_in_talk</i>
+            <div class="text-[14px]">+6289524087023</div>
+          </div>
+          <!-- email -->
+          <div class="flex items-center gap-2 mb-3">
+            <i class="material-icons">email</i>
+            <div class="text-[14px]">pinemjosse@gmail.com</div>
+          </div>
+        </div>
+        <!-- second-column -->
+        <div class="flex lg:justify-center gap-8">
+          <div>
+            <div class="text-[17px] mb-5">About Us</div>
+            <div class="text-[17px] mb-5">Contact Us</div>
+            <div class="text-[17px] mb-5">Legal Us</div>
+          </div>
+          <div>
+            <div class="text-[17px] mb-5">Our Team</div>
+            <div class="text-[17px] mb-5">Blog</div>
+            <div class="text-[17px] mb-5">Policy</div>
+          </div>
+        </div>
+        <!-- third column -->
+        <div>
+          <div class="mb-3 lg:text-center">Download Apps</div>
+          <img
+            src="./../assets/img/download-ios.png"
+            alt=""
+            class="w-[180px] h-[60px] mb-3 lg:m-auto"
+          />
+          <img
+            src="./../assets/img/download-android.png"
+            alt=""
+            class="w-[180px] h-[60px] lg:m-auto"
+          />
         </div>
       </div>
     </section>
-    <!-- bottom -->
-    <nav class="bg-[#0029A6] w-full">
-      <div
-        class="px-3 lg:px-0 lg:w-[1000px] py-9 m-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
-      >
-        <ul>
-          <li class="playwriteus text-2xl font-bold text-white mb-4">
-            Joe - Commerce
-          </li>
-          <!-- location -->
-          <li class="flex items-center gap-3 mb-3">
-            <i class="material-icons text-white">room</i>
-            <div class="text-white text-[13px]">
-              Medan, North Sumatera, Indonesia
-            </div>
-          </li>
-          <!-- 	phone_in_talk -->
-          <li class="flex items-center gap-3 mb-3">
-            <i class="material-icons text-white">phone_in_talk</i>
-            <div class="text-white text-[13px]">+6289524087023</div>
-          </li>
-          <!-- 	email -->
-          <li class="flex items-center gap-3 mb-3">
-            <i class="material-icons text-white">email</i>
-            <div class="text-white text-[13px]">pinemjosse@gmail.com</div>
-          </li>
-        </ul>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-8">
-          <ul>
-            <li class="mb-5">
-              <a href="#aboutus" class="block text-white">About Us</a>
-            </li>
-            <li class="mb-5">
-              <a href="#contactus" class="block text-white">Contact Us</a>
-            </li>
-            <li class="mb-5">
-              <a href="#legal" class="block text-white">Legal</a>
-            </li>
-          </ul>
-          <ul>
-            <li class="mb-5">
-              <a href="#ourteam" class="block text-white">Our Team</a>
-            </li>
-            <li class="mb-5">
-              <a href="#blog" class="block text-white">Blog</a>
-            </li>
-            <li class="mb-5">
-              <a href="#policy" class="block text-white">Policy</a>
-            </li>
-          </ul>
-        </div>
-        <!-- download apps -->
-        <div>
-          <div class="text-white mb-4 lg:text-center">Download Apps :</div>
-          <ul>
-            <li class="mb-2">
-              <a href="#app-store">
-                <img
-                  src="./../assets/img/download-ios.png"
-                  alt=""
-                  class="w-[155px] h-[45px] lg:m-auto"
-              /></a>
-            </li>
-            <li>
-              <a href="#google-play">
-                <img
-                  src="./../assets/img/download-android.png"
-                  alt=""
-                  class="w-[155px] h-[45px] lg:m-auto"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <script src="./../script.js"></script>
   </body>
 </html>

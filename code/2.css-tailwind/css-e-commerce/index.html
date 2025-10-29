@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
       @font-face {
         font-family: playwriteus;
@@ -27,7 +26,7 @@
     </style>
   </head>
   <body>
-    <!-- top bar -->
+    <!-- top navigation -->
     <nav class="bg-[#0029A6] w-full z-10 fixed top-0">
       <!-- only size device mobile -->
       <div class="block lg:hidden">
@@ -102,361 +101,275 @@
         </div>
       </div>
     </nav>
-    <!-- center -->
-    <section class="w-full lg:w-[1000px] m-auto mt-[60px]">
-      <!-- banner -->
-      <section class="mb-5">
-        <!-- only size device mobile -->
-        <div
-          class="block lg:hidden h-[300px] bg-[url(assets/img/banner.png)] bg-center bg-cover relative"
-        >
-          <div
-            class="absolute bottom-0 bg-black/60 w-full flex items-center px-3 py-5"
-          >
-            <div class="text-white font-semibold text-xl">
-              Recommended Only For You
-            </div>
-          </div>
-        </div>
-        <!-- only size more device mobile -->
-        <div
-          class="hidden lg:grid grid-rows-2 grid-cols-5 h-[350px] gap-4 pt-[40px]"
-        >
-          <!-- recommended only for you-->
-          <div
-            class="row-start-1 row-end-3 col-start-1 col-end-3 bg-[url(assets/img/banner.png)] bg-center bg-cover relative"
-          >
-            <div
-              class="absolute bottom-0 bg-black/60 w-full flex items-center py-5 px-4"
-            >
-              <div class="text-lg text-white font-semibold">
-                Recommended Only For You
-              </div>
-            </div>
-          </div>
-          <!-- best seller  -->
-          <div
-            class="row-start-1 row-end-3 col-start-3 col-end-4 bg-[url(assets/img/banner-1.png)] bg-center bg-cover relative"
-          >
-            <div
-              class="absolute bottom-0 bg-black/60 h-[60px] w-full flex items-center p-3"
-            >
-              <h1 class="text-sm text-white font-semibold">Best Seller 2025</h1>
-            </div>
-          </div>
-          <!-- long sleeved t shirt -->
-          <div
-            class="bg-red-500 row-start-1 row-end-2 col-start-4 col-end-5 bg-[url(assets/img/banner-2.png)] bg-center bg-cover relative"
-          >
-            <div
-              class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
-            >
-              <h1 class="text-sm text-white font-semibold">
-                Long Sleeved T-Shirt
-              </h1>
-            </div>
-          </div>
-          <!-- sweater -->
-          <div
-            class="bg-red-500 row-start-2 row-end-3 col-start-4 col-end-5 bg-[url(assets/img/banner-3.png)] bg-center bg-cover relative"
-          >
-            <div
-              class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
-            >
-              <h1 class="text-sm text-white font-semibold">Sweater</h1>
-            </div>
-          </div>
-          <!-- shoes -->
-          <div
-            class="bg-red-500 row-start-1 row-end-2 col-start-5 col-end-6 bg-[url(assets/img/banner-4.png)] bg-center bg-cover relative"
-          >
-            <div
-              class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
-            >
-              <h1 class="text-sm text-white font-semibold">Shoes</h1>
-            </div>
-          </div>
-          <!-- shirt -->
-          <div
-            class="bg-red-500 row-start-2 row-end-3 col-start-5 col-end-6 bg-[url(assets/img/banner-5.png)] bg-center bg-cover relative"
-          >
-            <div
-              class="absolute bottom-0 bg-black/50 h-[50px] w-full flex items-center p-3"
-            >
-              <h1 class="text-sm text-white font-semibold">T-Shirt</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- search -->
-      <section class="mb-6 px-2 lg:p-0 lg:w-[800px]">
-        <label for="search" class="block text-[20px] lg:text-2xl mb-3"
-          >Search :</label
-        >
-        <div class="flex items-center">
-          <input
-            type="text"
-            id="search"
-            class="border p-1 ps-3 text-[16px] lg:text-[18px] w-[85%] lg:w-[600px] shadow-lg h-[45px]"
-            placeholder="input the keyword product......"
-          />
-          <button
-            class="bg-[#0029A6] w-[15%] lg:w-[55px] h-[42px] flex rounded-r-[8px] shadow-lg"
-          >
-            <i class="material-icons text-white m-auto">search</i>
-          </button>
-        </div>
-      </section>
-      <!-- product  -->
-      <section class="mb-6 px-2 lg:p-0 grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">Product</figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $10.00
-            </figcaption>
-          </figure>
-        </a>
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product-1.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">
-              Product - 1
-            </figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $11.00
-            </figcaption>
-          </figure>
-        </a>
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product-2.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">
-              Product - 2
-            </figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $12.00
-            </figcaption>
-          </figure>
-        </a>
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product-3.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">
-              Product - 3
-            </figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $13.00
-            </figcaption>
-          </figure>
-        </a>
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product-3.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">
-              Product - 3
-            </figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $3.00
-            </figcaption>
-          </figure>
-        </a>
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product-3.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">
-              Product - 4
-            </figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $40.00
-            </figcaption>
-          </figure>
-        </a>
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">Product</figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $10.00
-            </figcaption>
-          </figure>
-        </a>
-        <a
-          href="./pages/product-detail.html"
-          class="duration-300 ease-in hover:scale-[1.2] cursor-pointer"
-        >
-          <figure>
-            <img
-              src="./assets/img/product.png"
-              alt=""
-              class="rounded-lg mb-2"
-            />
-            <figcaption class="text-[18px] lg:text-[19px]">Product</figcaption>
-            <figcaption class="text-[16px] text-[#0029A6] lg:text-[17px]">
-              $10.00
-            </figcaption>
-          </figure>
-        </a>
-      </section>
-      <!-- pagination -->
-      <nav class="flex flex-col my-6 mb-12">
-        <p class="text-center text-[14px] lg:text-[16px] lg:text-[18px] mb-3">
-          Showing 1 to 8 of 24 Products
-        </p>
-        <ul class="m-auto flex gap-2">
-          <li
-            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center"
-          >
-            <i class="material-icons text-3xl">skip_previous</i>
-          </li>
-          <li
-            class="h-[55px] w-[55px] rounded-full shadow flex justify-center items-center bg-[#0029A6] text-white text-xl"
-          >
-            1
-          </li>
-          <li
-            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center text-xl"
-          >
-            2
-          </li>
-          <li
-            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center text-xl"
-          >
-            3
-          </li>
-          <li
-            class="h-[55px] w-[55px] rounded-full bg-white shadow flex justify-center items-center"
-          >
-            <i class="material-icons text-2xl">skip_next</i>
-          </li>
-        </ul>
-      </nav>
-    </section>
-    <!-- bottom -->
-    <nav class="bg-[#0029A6] w-full">
+    <!-- banner -->
+    <section class="w-full lg:w-[1000px] mt-[60px] lg:mt-[95px] lg:m-auto">
+      <!-- this is only for mobile sizes  -->
       <div
-        class="px-3 lg:px-0 lg:w-[1000px] py-9 m-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
+        class="block lg:hidden bg-[url(assets/img/banner.png)] bg-center bg-no-repeat bg-cover flex items-end h-[340px]"
       >
-        <ul>
-          <li class="playwriteus text-2xl font-bold text-white mb-4">
-            Joe - Commerce
-          </li>
-          <!-- location -->
-          <li class="flex items-center gap-3 mb-3">
-            <i class="material-icons text-white">room</i>
-            <div class="text-white text-[13px]">
-              Medan, North Sumatera, Indonesia
-            </div>
-          </li>
-          <!-- 	phone_in_talk -->
-          <li class="flex items-center gap-3 mb-3">
-            <i class="material-icons text-white">phone_in_talk</i>
-            <div class="text-white text-[13px]">+6289524087023</div>
-          </li>
-          <!-- 	email -->
-          <li class="flex items-center gap-3 mb-3">
-            <i class="material-icons text-white">email</i>
-            <div class="text-white text-[13px]">pinemjosse@gmail.com</div>
-          </li>
-        </ul>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-8">
-          <ul>
-            <li class="mb-5">
-              <a href="#aboutus" class="block text-white">About Us</a>
-            </li>
-            <li class="mb-5">
-              <a href="#contactus" class="block text-white">Contact Us</a>
-            </li>
-            <li class="mb-5">
-              <a href="#legal" class="block text-white">Legal</a>
-            </li>
-          </ul>
-          <ul>
-            <li class="mb-5">
-              <a href="#ourteam" class="block text-white">Our Team</a>
-            </li>
-            <li class="mb-5">
-              <a href="#blog" class="block text-white">Blog</a>
-            </li>
-            <li class="mb-5">
-              <a href="#policy" class="block text-white">Policy</a>
-            </li>
-          </ul>
-        </div>
-        <!-- download apps -->
-        <div>
-          <div class="text-white mb-4 lg:text-center">Download Apps :</div>
-          <ul>
-            <li class="mb-2">
-              <a href="#app-store">
-                <img
-                  src="./assets/img/download-ios.png"
-                  alt=""
-                  class="w-[155px] h-[45px] lg:m-auto"
-              /></a>
-            </li>
-            <li>
-              <a href="#google-play">
-                <img
-                  src="./assets/img/download-android.png"
-                  alt=""
-                  class="w-[155px] h-[45px] lg:m-auto"
-              /></a>
-            </li>
-          </ul>
+        <div class="w-full bg-black/80 text-white px-3 py-5 text-[19px]">
+          Recommended Only For You
         </div>
       </div>
-    </nav>
+      <!-- this is only for table dan desktop -->
+      <div class="hidden lg:grid gap-4 grid-cols-5 grid-rows-2 h-[340px]">
+        <!-- recommended only for you -->
+        <div
+          class="col-start-1 col-end-3 row-start-1 row-end-3 bg-[url(assets/img/banner.png)] bg-center bg-no-repeat bg-cover flex items-end"
+        >
+          <div class="w-full bg-black/80 text-white px-3 py-5 text-[19px]">
+            Recommended Only For You
+          </div>
+        </div>
+        <!-- best seller  -->
+        <div
+          class="col-start-3 col-end-4 row-start-1 row-end-3 bg-[url(assets/img/banner-1.png)] bg-center bg-no-repeat bg-cover flex items-end"
+        >
+          <div class="w-full bg-black/80 text-white px-3 py-4 text-[15px]">
+            Best Seller 2025
+          </div>
+        </div>
+        <!-- long sleeved t-shirt  -->
+        <div
+          class="col-start-4 col-end-5 row-start-1 row-end-2 bg-[url(assets/img/banner-2.png)] bg-center bg-no-repeat bg-cover flex items-end"
+        >
+          <div class="w-full bg-black/80 text-white px-3 py-3 text-[12px]">
+            Long Sleeved T-Shirt
+          </div>
+        </div>
+        <!-- Sweater  -->
+        <div
+          class="col-start-4 col-end-5 row-start-2 row-end-3 bg-[url(assets/img/banner-3.png)] bg-center bg-no-repeat bg-cover flex items-end"
+        >
+          <div class="w-full bg-black/80 text-white px-3 py-3 text-[13px]">
+            Sweater
+          </div>
+        </div>
+        <!-- Shoes -->
+        <div
+          class="col-start-5 col-end-6 row-start-1 row-end-2 bg-[url(assets/img/banner-4.png)] bg-center bg-no-repeat bg-cover flex items-end"
+        >
+          <div class="w-full bg-black/80 text-white px-3 py-3 text-[13px]">
+            Shoes
+          </div>
+        </div>
+        <!-- T-shirt  -->
+        <div
+          class="col-start-5 col-end-6 row-start-2 row-end-3 bg-[url(assets/img/banner-5.png)] bg-center bg-no-repeat bg-cover flex items-end"
+        >
+          <div class="w-full bg-black/80 text-white px-3 py-3 text-[13px]">
+            T-Shirt
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- search -->
+    <section class="w-full lg:w-[1000px] px-2 lg:px-0 lg:m-auto !my-5">
+      <label for="search" class="text-[26px] block mb-3"> Search :</label>
+      <div class="flex">
+        <input
+          id="search"
+          type="text"
+          class="border py-2 px-3 w-[600px] shadow"
+          placeholder="input the key product......"
+        />
+        <button
+          class="bg-[#0029A6] px-3 py-1 flex justify-center items-center rounded-e shadow"
+        >
+          <i class="material-icons text-white">search</i>
+        </button>
+      </div>
+    </section>
+    <!-- product -->
+    <section class="w-full lg:w-[1000px] lg:m-auto !my-5 px-2 lg:px-0">
+      <div class="grid gap-4 grid-cols-2 lg:grid-cols-4">
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product-1.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product - 1</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product-2.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product - 2</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product-3.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product - 3</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product-1.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product - 1</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product-2.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product - 2</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+        <a
+          href="./pages/product-detail.html"
+          class="duration-300 hover:scale-120"
+        >
+          <img
+            src="./assets/img/product-3.png"
+            alt=""
+            class="rounded mb-2 w-full h-auto"
+          />
+          <div class="text-[19px]">Product - 3</div>
+          <div class="text-[16px] text-[#0029A6]">$10.00</div>
+        </a>
+      </div>
+    </section>
+    <!-- pagination -->
+    <section class="w-full lg:w-[1000px] lg:m-auto !my-5">
+      <div class="text-center mb-2">Showing 1 to 8 of Products</div>
+      <div class="flex gap-1 justify-center">
+        <!-- prev page -->
+        <button
+          class="bg-white shadow w-[60px] h-[60px] rounded-full flex justify-center items-center"
+        >
+          <i class="material-icons">skip_previous</i>
+        </button>
+        <!-- 1 -->
+        <button
+          class="bg-[#0029A6] text-white shadow w-[60px] h-[60px] rounded-full flex justify-center items-center"
+        >
+          1
+        </button>
+        <!-- 2 -->
+        <button
+          class="bg-white shadow w-[60px] h-[60px] rounded-full flex justify-center items-center"
+        >
+          2
+        </button>
+        <!-- 3 -->
+        <button
+          class="bg-white shadow w-[60px] h-[60px] rounded-full flex justify-center items-center"
+        >
+          3
+        </button>
+        <!-- next page -->
+        <button
+          class="bg-white shadow w-[60px] h-[60px] rounded-full flex justify-center items-center"
+        >
+          <i class="material-icons">skip_next</i>
+        </button>
+      </div>
+    </section>
+    <!-- bottom navigation -->
+    <section class="bg-[#0029A6]">
+      <div
+        class="w-full lg:w-[1000px] grid gap-3 grid-cols-1 lg:grid-cols-3 py-8 px-2 text-white m-auto"
+      >
+        <!-- first-column -->
+        <div>
+          <div class="text-[25px] playwriteus mb-4">Joe-Commerce</div>
+          <!-- location -->
+          <div class="flex items-center gap-2 mb-3">
+            <i class="material-icons">room</i>
+            <div class="text-[14px]">Medan, North Sumatera, Indonesian</div>
+          </div>
+          <!-- number phone -->
+          <div class="flex items-center gap-2 mb-3">
+            <i class="material-icons">phone_in_talk</i>
+            <div class="text-[14px]">+6289524087023</div>
+          </div>
+          <!-- email -->
+          <div class="flex items-center gap-2 mb-3">
+            <i class="material-icons">email</i>
+            <div class="text-[14px]">pinemjosse@gmail.com</div>
+          </div>
+        </div>
+        <!-- second-column -->
+        <div class="flex lg:justify-center gap-8">
+          <div>
+            <div class="text-[17px] mb-5">About Us</div>
+            <div class="text-[17px] mb-5">Contact Us</div>
+            <div class="text-[17px] mb-5">Legal Us</div>
+          </div>
+          <div>
+            <div class="text-[17px] mb-5">Our Team</div>
+            <div class="text-[17px] mb-5">Blog</div>
+            <div class="text-[17px] mb-5">Policy</div>
+          </div>
+        </div>
+        <!-- third column -->
+        <div>
+          <div class="mb-3 lg:text-center">Download Apps</div>
+          <img
+            src="./assets/img/download-ios.png"
+            alt=""
+            class="w-[180px] h-[60px] mb-3 lg:m-auto"
+          />
+          <img
+            src="./assets/img/download-android.png"
+            alt=""
+            class="w-[180px] h-[60px] lg:m-auto"
+          />
+        </div>
+      </div>
+    </section>
     <script src="./script.js"></script>
   </body>
 </html>
