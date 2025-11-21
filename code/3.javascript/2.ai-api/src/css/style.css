@@ -1,0 +1,12 @@
+@font-face {
+  font-family: montserrat;
+  src: url("./../font/montserrat/Montserrat-Regular.ttf");
+}
+
+* {
+  font-family: montserrat;
+}
+.loading {
+  cursor: not-allowed;
+  opacity: 50%;
+}

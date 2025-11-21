@@ -1,0 +1,295 @@
+introduction, how to add, variable, datatypes, operator,  if conditions, loops, array, object, function, popup boxes, , date, jsevent, RegExp,  practice chess, asynchronous, API & Fetch
+Programming
+Cara kita memberikan perintah kepada computer
+perintah yang diberikan harus benar, terstruktur, masuk akal, sesuai dengan aturan pada Bahasa pemograman tertentu
+
+ilustrasi perintah manusia ke manusia
+contoh si a pengen main ke rumah si b
+perintah :
+masuk komplek
+lurus terus 200m
+belok kanan, setelah belok kanan, lurus terus sampai 200m
+rumah saya nomor 4
+perintah ataupun instruksi benar, terstruktur, masuk akal.
+andaikan perintah tidak terstruktur 
+
+dengan perintah :
+belok kanan
+masuk komplek
+rumah saya nomor 4
+lurus terus 200m
+apakah si b sampai kerumah si a ? 
+TIDAK
+
+begitu juga dengan programming
+lalu bagaimana manusia bisa memerintah ke computer, sehingga mengeksekusinya ?
+
+perlu kita ketahui computer hanya bisa memahami Bahasa mesin
+Bahasa mesin hanya berisi 0101010 atau sebutannya bilangan biner
+yang paling mendekati Bahasa mesin atau low level language yaitu Bahasa assembly
+yang paling menjauhi Bahasa mesin atau high level language yaitu javascript
+ 
+Bahasa pemogramman itu ada :
+JavaScript, typescript, actionscript, 
+ruby, python, 
+java, VB.net, 
+C++, 
+C, 
+bahasa assembly.
+
+
+kita bisa menulis kalimat perintah / bahasa pemograman di software code editor seperti visual studio code (yang paling popular), android studio, dreamweaver, notepad, vim, atom miscellaneous
+kumpulan code kita di convert ke Bahasa mesin dan eksekusinya
+
+Ada 3 cara menerjemahkan Bahasa Pemograman ke Bahasa mesin dan mengeksekusinya
+
+compiler
+a ngoding , dan source code akan di compile menjadi bahasa mesin , lalu di kasih ke b dan menjalankan coding dari si a
+contohnya c, C++, objective-c
+
+interpreter
+a buat source code a menduplikat kasih ke b , dan si b melakukan interpreter di ubah menjadi Bahasa mesin dan diexecute
+javascript,php
+
+hybrid
+a buat source code , lalu compile tapi tidak bisa diexecute menjadi file Intermediate Language/ byte code, lalu file Intermedia Language tadi di kasih ke b melakukan Just In Time compilation dan diexecute
+java, vb.net, python
+
+kenapa javascript??
+versatile (web, android, ios, desktop, backend-developer, machine learning, IOT engineer)
+Gratis
+javascript can change html content, html attribute values and css
+mudah difahami 
+banyak framework, library, dan komunitas 
+
+Javascript is  high-level, scripting, untyped, and interpreted programming language
+high-level =  mudah difahami 
+scripting = 
+Bahasa pemograman yang tertanam di dalam program yang lebih besar 
+actionscript di adobeflash 
+vbcript di msoffice
+javascript di web-browser
+C++, java, C#, Obj-C di system desktop 
+untyped / dynamically typed = tidak memperhatikan tipe data dari sebuah vatiabel
+interpreted = 
+
+
+sejarah javascript 
+National Center Of Suppercomputing Application University of Illinois At Urbana-Champaign membuat mosaic browser 1992 
+setelah itu, membuat perusahaan Netscape communicator 
+setelah itu, membuat Netscape navigator dan merekrut Brendan eich
+awalanya javascript dibuat Java + Scheme + self = Mocha dalam 10 Hari diubah namamnya Livescript !!!
+lalu, Netscape mengajak sun microsystems (yang punya java) mengalahkan microsoft 
+dan jadilah javascript
+Microsoft gak mau kalah , adanya internet explore sedang popular dan membuat JScript
+Netscape membuat  standarisasi ke w3c , w3c tidak menerima
+Netscape membuat stadarisasi ke ecma international pada tahun 1996, tapi Namanya menjadi ECMAScript karena masih lisensi sun microsystmen
+perkembangan ECMAScript 
+1997, ES1
+1998, ES2
+1999, ES3
+2005, AJAX
+2008, ES4  
+2009, ES5
+2015, ES6
+2016, ES7
+
+Development Environment
+Sebuat system dan tools untuk menulis program kita
+kita hanya butuh web browser 
+
+1992 — Mosaic Browser
+  ↓
+National Center for Supercomputing Applications (NCSA),
+University of Illinois at Urbana–Champaign developed Mosaic,
+one of the first web browsers.
+
+1994 — Netscape Communicator founded
+  ↓
+The Mosaic team created Netscape and launched
+Netscape Navigator — a popular browser at the time.
+
+1995 — Brendan Eich hired
+  ↓
+Eich created a new language:
+  Java + Scheme + Self = Mocha (in just 10 days!)
+  ↓
+Mocha → renamed to LiveScript
+  ↓
+LiveScript → renamed to JavaScript
+  ↓
+Netscape partnered with Sun Microsystems (creator of Java)
+to compete with Microsoft.
+
+1996 — Microsoft released JScript
+  ↓
+Microsoft introduced its own version for Internet Explorer.
+
+1996 — Netscape sought standardization
+  ↓
+W3C rejected the proposal, so Netscape turned to ECMA International.
+  ↓
+The official standard was approved as ECMAScript
+(because Java was still licensed by Sun Microsystems).
+
+1997 — ECMAScript 1 (ES1)
+1998 — ECMAScript 2 (ES2)
+1999 — ECMAScript 3 (ES3)
+2005 — AJAX (new technology boosting JavaScript)
+2008 — ECMAScript 4 (cancelled)
+2009 — ECMAScript 5 (ES5)
+2015 — ECMAScript 6 (ES6 / ES2015)
+2016 — ECMAScript 7 (ES7 / ES2016)
+
+
+Di dalam javascript ada v8 engine
+di dalam v8 ada heap - memory allocation, stack - function call & execution context
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
