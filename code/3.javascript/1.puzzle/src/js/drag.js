@@ -1,10 +1,14 @@
-import handleUI from "./ui.js";
-import { getStorage, moveItem, setStorage } from "./utils.js";
+import { handleUI, resetUI } from "./ui.js";
+import {
+  checkWin,
+  getNameImg,
+  getStorage,
+  removeStorage,
+  setStorage,
+} from "./utils.js";
 
 let currTile;
 let otherTile;
-
-const imgOrder = getStorage("imgOrder");
 
 const dragStart = (e) => {
   currTile = e.target;
@@ -18,34 +22,49 @@ const dragDrop = (e) => {
   otherTile = e.target;
 };
 const dragEnd = () => {
-  let currCoords = currTile.id.split("-");
-  let r = parseInt(currCoords[0]);
-  let c = parseInt(currCoords[1]);
-  let otherCoords = otherTile.id.split("-");
-  let r1 = parseInt(otherCoords[0]);
-  let c1 = parseInt(otherCoords[1]);
+  // take coordinate row and col
+  const currCoords = currTile.id.split("-");
+  const r = Number(currCoords[0]);
+  const c = Number(currCoords[1]);
+  const otherCoords = otherTile.id.split("-");
+  const r1 = Number(otherCoords[0]);
+  const c1 = Number(otherCoords[1]);
+  const moveHorizontal = r === r1 && (c === c1 + 1 || c === c1 - 1);
+  const moveVertical = c === c1 && (r === r1 + 1 || r === r1 - 1);
+  const isAdjacent = moveHorizontal || moveVertical;
+  if (!isAdjacent) return;
 
-  let moveLeft = r === r1 && c1 === c - 1;
-  let moveRight = r === r1 && c1 === c + 1;
-  let moveUp = c === c1 && r1 === r - 1;
-  let moveDown = c === c1 && r1 === r + 1;
-  let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
-  if (isAdjacent) {
-    // save position
-    const arr1 = [...imgOrder];
-    console.log("Start Position");
-    console.log(`src : ${currTile.src} , position : ${currTile.id}`);
-    // console.log("End Position");
-    // console.log(`src : ${otherTile.src} , position : ${otherTile.id}`);
-    // setStorage("imgOrder", arr1);
+  // change image
+  let currImg = currTile.src;
+  let otherImg = otherTile.src;
+  currTile.src = otherImg;
+  otherTile.src = currImg;
 
-    // change image
-    let currImg = currTile.src;
-    let otherImg = otherTile.src;
-    currTile.src = otherImg;
-    otherTile.src = currImg;
+  // save position into local storage
+  const imgOrder = getStorage("imgOrder");
+  const index = imgOrder.findIndex((el) => {
+    return el.id === `${r}-${c}`;
+  });
+  const index1 = imgOrder.findIndex((el) => {
+    return el.id === `${r1}-${c1}`;
+  });
+  imgOrder[index].name = getNameImg(currTile.src);
+  imgOrder[index1].name = getNameImg(otherTile.src);
+  setStorage("imgOrder", imgOrder);
 
-    // win alert coming soon
+  // win alert
+  const isWin = checkWin();
+  if (isWin) {
+    Swal.fire({
+      icon: "success",
+      title: "Congratulation !, You Win",
+      showCancelButton: true,
+      confirmButtonText: "Play Again",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        resetUI();
+      }
+    });
   }
 };
 export { dragStart, dragOver, dragEnter, dragLeave, dragDrop, dragEnd };

@@ -6,50 +6,12 @@ import {
   dragOver,
   dragStart,
 } from "./drag.js";
-import { getStorage, setStorage } from "./utils.js";
+import { getStorage, removeStorage, setStorage } from "./utils.js";
 
-const handleUI = () => {
-  const imgOrder = getStorage("imgOrder");
-  if (!imgOrder) {
-    setStorage("imgOrder", [
-      {
-        id: "1-1",
-        name: 1,
-      },
-      {
-        id: "1-2",
-        name: 2,
-      },
-      {
-        id: "1-3",
-        name: 3,
-      },
-      { id: "2-1", name: 4 },
-      {
-        id: "2-2",
-        name: 5,
-      },
-      {
-        id: "2-3",
-        name: 6,
-      },
-      {
-        id: "3-1",
-        name: 7,
-      },
-      {
-        id: "3-2",
-        name: 8,
-      },
-      {
-        id: "3-3",
-        name: 9,
-      },
-    ]);
-  }
+const uiBoard = (imgOrder) => {
   for (const el of imgOrder) {
     const tile = document.createElement("img");
-    tile.id = `${el.id}`;
+    tile.id = el.id;
     tile.src = `./src/img/${el.name}.png`;
     // drag functionallity
     // 1.click an image to drag
@@ -68,4 +30,49 @@ const handleUI = () => {
     document.getElementById("board").append(tile);
   }
 };
-export default handleUI;
+const positionDefault = [
+  {
+    id: "1-1",
+    name: 3,
+  },
+  {
+    id: "1-2",
+    name: 2,
+  },
+  {
+    id: "1-3",
+    name: 1,
+  },
+  { id: "2-1", name: 6 },
+  {
+    id: "2-2",
+    name: 5,
+  },
+  {
+    id: "2-3",
+    name: 4,
+  },
+  {
+    id: "3-1",
+    name: 9,
+  },
+  {
+    id: "3-2",
+    name: 8,
+  },
+  {
+    id: "3-3",
+    name: 7,
+  },
+];
+const handleUI = () => {
+  const imgOrder = getStorage("imgOrder") || positionDefault;
+  uiBoard(imgOrder);
+  setStorage("imgOrder", imgOrder);
+};
+const resetUI = () => {
+  removeStorage("imgOrder");
+  document.getElementById("board").innerHTML = "";
+  handleUI();
+};
+export { handleUI, resetUI };

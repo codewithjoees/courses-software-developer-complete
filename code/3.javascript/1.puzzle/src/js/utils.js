@@ -8,15 +8,34 @@ const getStorage = (storage) => {
 const removeStorage = (storage) => {
   localStorage.removeItem(storage);
 };
-const moveItem = (arr, fromIndex, toIndex) => {
-  const arr1 = [...arr];
-  const item = arr1.splice(fromIndex, 1)[0];
-  arr1.splice(toIndex, 1, item);
-  setStorage("imgOrder", arr1);
-  return arr1;
-};
 const getNameImg = (src) => {
   const filename = src.split("/").pop();
   return Number(filename.split(".")[0]);
 };
-export { moveItem, getStorage, setStorage, removeStorage, getNameImg };
+const checkWin = () => {
+  const positionWin = JSON.stringify([
+    {
+      id: "2-2",
+      name: 5,
+    },
+    {
+      id: "2-3",
+      name: 6,
+    },
+    {
+      id: "3-1",
+      name: 7,
+    },
+    {
+      id: "3-2",
+      name: 8,
+    },
+    {
+      id: "3-3",
+      name: 9,
+    },
+  ]);
+  const imgOrder = JSON.stringify(getStorage("imgOrder").splice(4, 6));
+  return positionWin === imgOrder;
+};
+export { checkWin, getStorage, setStorage, removeStorage, getNameImg };

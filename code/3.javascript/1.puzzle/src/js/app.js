@@ -1,3 +1,3 @@
-import handleUI from "./ui.js";
+import { handleUI } from "./ui.js";
 
 handleUI();
