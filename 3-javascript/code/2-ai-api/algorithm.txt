@@ -1,0 +1,4 @@
+Chat Bot
+1. Create the project structure
+2. Add fonts, icons, strucure html tailwind, and design the layout
+3. Obtain a Gemini API key, fetch data from the API, and render the tailored response

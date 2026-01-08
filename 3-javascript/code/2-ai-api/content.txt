@@ -1,0 +1,327 @@
+<!-- 0. introduction -->
+Okay, let me demonstrate.
+As we can see, this app has three main components.
+1. Header Component
+At the top, we have the header. Inside it, we display “joee-ai” and “created by Josse Surya Pinem”, which is my name. when press created by josse surya pinem it will direct my web .
+2. Body Component
+The second component is the body.
+It’s empty at first because we haven’t asked anything yet.
+3. Footer Component
+The third component is the footer.
+Inside the footer, we have an input field and a button to send our question to the AI.
+We can ask anything we want.
+Let’s try an example question:
+“Is it possible for AI to replace humans?”
+After pressing the Send button, you can see the app processing the question.
+While it’s thinking, we cannot ask anything else — we simply wait until it finishes.
+Notice what happens in the body component:
+On the left, we see our question
+On the right, we see the AI’s response
+Pretty cool UI, right?
+And the answer is cool as well!
+Without further ado, let’s create this app.
+Let’s start coding.
+<!-- 1. Create the project structure -->
+Create a folder named ai-api. Open the folder you just created, then open Command Prompt and type:
+code .
+This command will open Visual Studio Code and point it directly to the directory you selected.
+Next, click the New File icon and create index.html.
+Then create a folder named src. Inside the src folder, create the following subfolders:
+css
+font
+js
+Inside the font folder, you can download your fonts from the link provided (or the one I will include in the next section).
+Inside the js folder, create these files:
+app.js — handles program initialization, selecting elements, and updating/modifying elements on the page.
+handle-api.js — responsible for receiving the user's input, fetching the API, error handling, and rendering the tailored results from the API.
+service.js — contains the API base URL and request functions.
+ui.js — contains HTML-rendering functions using ES6 JavaScript.
+utils.js — contains reusable helper functions.
+Inside the css folder, add a file named style.css.
+<!-- 2. Add fonts, icons, strucure html tailwind, and design the layout -->
+We start by creating the HTML structure using TailwindCSS from tailwindcss.com.
+Next, we add our custom fonts — Montserrat and Poppins. You can download these fonts from Google Fonts or from my GitHub repository. I’ll include the link in the section below.
+Then, we link our CSS file as usual.
+Inside the <head> element, add a <link> tag with the href attribute pointing to your stylesheet.
+Remember:
+./ means the same folder
+../ means go up one folder
+Because our src folder is in the same directory as the HTML file, we use:
+./src/css/style.css
+Next, we add icon support from W3Schools. Just search “Google Icons W3Schools,” copy the link, and paste it into the <head> section.
+Setting Up the Fonts
+Inside style.css in the src folder, add:
+@font-face {
+  font-family: montserrat;
+  src: url("./../font/montserrat/Montserrat-Regular.ttf");
+}
+* {
+  font-family: montserrat;
+}
+This means:
+All text in our HTML will use the Montserrat font, taken from the .ttf file you downloaded from GitHub or Google Fonts.
+Building the Layout (index.html)
+Now go to index.html.
+Create a main wrapper <div> and give it these classes:
+w-[768px] → width 768px
+m-auto → center horizontally
+flex flex-col → flex direction top-to-bottom
+justify-between → space between header, main, and footer
+h-screen → full client screen height
+shadow-md → medium shadow
+Header Component
+Inside the wrapper, add a <header>.
+Give it:
+bg-[#0029A6] → custom blue background
+p-3 → padding
+flex justify-between items-center → space between items and vertically centered
+Now add 2 elements inside the header:
+1️⃣ Left side text (Joee-AI)
+Use a <div> with:
+text-2xl text-white font-bold
+2️⃣ Right side link
+Use an <a> tag with:
+href="https://josserich.github.io"
+Inner text: created by josse surya pinem
+Class: text-white
+That completes the header and root component.
+Main Component
+Create a <main> element with classes:
+p-4 → padding
+overflow-y-auto → vertical scrolling when content becomes long
+bg-white
+flex-grow → take all remaining vertical space inside the parent
+Inside <main>, we add 2 kinds of messages:
+User message (right side bubble)
+AI response message (left side bubble)
+User Message (right side)
+Add a <div> with:
+mb-4
+bg-[#0029A6]
+text-white
+ml-auto
+rounded-br-none
+p-3
+rounded-2xl
+w-[75%]
+Add the text:
+Hello from Indonesian – user.
+AI Message (left side)
+Copy the previous bubble, but modify:
+Change bg-[#0029A6] text-white ml-auto
+to bg-blue-100 text-black mr-auto
+Change rounded-br-none
+to rounded-bl-none
+Replace the text with:
+Hello from Artificial Intelligence.
+Copy this three times if you want multiple example messages.
+As expected, the layout now looks like a chat or social media message app:
+messages from you appear on the right, and messages from the AI appear on the left.
+Footer Component
+Create a <footer> and give it:
+px-2 py-3 bg-white
+Inside footer add:
+1️⃣ Input field
+<input type="text" class="bg-blue-100 p-3 w-[90%] rounded-md" placeholder="Ask Me Anything....">
+2️⃣ Send button
+<button class="px-4 bg-[#0029A6] text-white w-[10%] rounded flex justify-center items-center">
+  <i class="material-icons text-white">send</i>
+</button>
+Everything should render correctly.
+Why flex-grow is Important
+If we remove flex-grow from the <main> component, the layout becomes messy because the main content no longer stretches to fill the available vertical space.
+flex-grow makes the main component expand to fill the remaining height inside the parent container.
+We can focus on the main container width by using the class w-full md:w-[768px].
+What does this mean?
+w-full
+This sets the width to 100% for small devices (screen width below 768px).
+md:w-[768px]
+The prefix md: stands for medium breakpoint, which in Tailwind means a device with a minimum width of 768px.
+So, when the screen size is 768px or larger, the width will be set to exactly 768px.
+In simpler words:
+Small screen (<768px) → width becomes full (w-full).
+Medium screen (≥768px) → width becomes 768px (md:w-[768px]).
+Let’s try resizing the website to 768px and above — you'll see the container switches from full width to a fixed 768px width. 
+What’s Next
+We have finished:
+layouting
+designing
+positioning
+responsive structure
+Next, we will focus on:
+👉 fetching the API
+👉 rendering tailored responses from the AI
+<!-- 3. Obtain a Gemini API key, fetch data from the API, and render the tailored response -->
+We can go to https://aistudio.google.com
+, or you can search on Google for Gemini API. On the top navigation, click Explore Documentation, then click Get API Key, then click Create API Key. Fill the name as fetch-ai-api, or change it to the default project “Gemini”. Copy the API key.
+Go to the file services.js and create a variable:
+const apiKey = "PASTE_YOUR_API_KEY_HERE";
+Next, create the variable:
+const apiURL = "";
+To get the value for apiURL, go back to the documentation, find REST, and copy the URL beside the keyword curl. That is your API URL. Paste it into the value of apiURL.
+Create an asynchronous function using ES6 style. We can name it getAPI with one parameter req.
+Inside, create the variable:
+const res = await fetch(apiURL, {
+The fetch function has two parameters:
+the first is the API URL
+the second is an object.
+As we know, an object has key–value pairs.
+The first key–value pair is:
+method: "POST"
+We know this from checking the documentation.
+Next is headers. headers is also an object.
+The first key–value pair in headers is taken from the documentation:
+"x-goog-api-key": apiKey
+The second key–value pair is also from the documentation:
+"Content-Type": "application/json"
+Next is body. body is an object converted to a string using:
+JSON.stringify(...)
+This function receives the object we copy from the documentation — the object shown beside -d.
+After this, create the variable:
+const data = await res.json();
+Then create:
+const response = data.candidates[0].content.parts[0].text;
+We do this because we only want the text response.
+Add:
+return response;
+Then export the function:
+export default getAPI;
+Next: handle-api.js
+Create the function using ES6 style and asynchronous syntax:
+const handleChat = async () => {};
+Select the input element:
+const input = document.querySelector("footer input");
+We want to prevent the user from submitting an empty input.
+To do that:
+const txt = input.value.trim();
+.trim() is a function that removes whitespace from both ends of a string.
+To understand trim better, go to app.js and create:
+const txt = "   hello world";
+console.log(txt);
+console.log(txt.trim());
+The first log shows the spaces.
+The second log removes them.
+Return to handle-api.js.
+Select the button
+const btn = document.querySelector("footer button");
+Select the chat box:
+const chatBox = document.querySelector("main");
+Validation is important.
+If the user does not input anything, do nothing:
+if (!txt) return;
+Log the input:
+console.log(txt);
+Export this function and import it in app.js.
+We want:
+when the user presses the button
+the user message is rendered on the right
+the message is sent to AI
+the AI response is rendered on the left.
+Select the button again in app.js:
+const btn = document.querySelector("footer button");
+Then:
+btn.addEventListener("click", handleChat);
+In human language:
+“Hey JavaScript, find the button inside the footer. When the user clicks it, execute the function handleChat.”
+Try typing: How are you?
+Click the button.
+In the logs, you'll see only the user’s message — not the AI response yet.
+Continue in handleChat
+If we comment out:
+if (!txt) return;
+And we submit empty input, the log still runs.
+That means empty input still triggers the function and wastes our API call.
+That is why we need this validation.
+For better user experience, add:
+input.placeholder = "waiting....";
+btn.classList.add("loading");
+In style.css:
+.loading {
+  cursor: not-allowed;
+  opacity: 50%;
+}
+Now when we submit “How are you?”, we see the loading effect.
+Add try–catch–finally
+try = when async executes successfully
+catch = when async fails
+finally = always runs after try/catch completes
+In handleChat, add:
+chatBox.innerHTML += uiChat("user", txt);
+In human language:
+“chatBox means find the element stored in variable chatBox (which is <main>).
+.innerHTML means return the HTML content of chatBox and add to it.”
+Understanding +=
+Example in app.js:
+let x = 1;
+x += 1;
+console.log(x); // 2
+x = x + 1; // same result
++= means: take the previous value and add the new one.
+So:
+chatBox.innerHTML += uiChat("user", text);
+means append a new chat bubble to existing ones.
+Next: Create ui.js
+Create an ES6 function named uiChat with 2 arguments:
+role → "user" or "bot"
+txt → the message text
+Return template HTML.
+Use conditional CSS:
+${role === "user"
+  ? "ml-auto bg-[#0029A6] text-white rounded-br-none"
+  : "bg-blue-100 rounded-bl-none"}
+This means:
+If the role is user → right side
+If the role is not user or  (bot) → left side
+Insert the text:
+${txt}
+Export the function.
+Loading Bubble
+In handle-api.js:
+chatBox.innerHTML += uiChatLoading();
+Since we don’t have uiChatLoading, create it in ui.js.
+It should return the same structure but only the “false” part of the ternary.
+Add animate-pulse, and replace text with:
+thinking in secs…
+Add:
+id="bot-loading"
+Export it.
+Back to handle-api.js
+Select the loading bubble:
+const loadingBubble = document.querySelector("#bot-loading");
+Call the API:
+const answer = await getAPI(txt);
+Replace loading bubble with AI response:
+loadingBubble.outerHTML = uiChat("bot", answer);
+Catch Block
+console.error(err);
+loadingBubble.outerHTML = uiChat("bot", "⚠️ Error: Something went wrong.");
+throw err;
+Do not swap the order.
+throw err must be last.
+Finally Block
+input.value = "";
+input.placeholder = "ask me anything ....";
+btn.classList.remove("loading");
+Next, create scrollBottom.
+scrollBottom (utils.js)
+Create ES6 function:
+const scrollBottom = (docs, target) => {
+  docs.scrollTo({
+    top: target.offsetTop,
+    behavior: "smooth",
+  });
+};
+Meaning:
+“Find the element docs, then scroll to the top position of target smoothly.”
+Export it.
+Back in handle-api.js, call it:
+scrollBottom(chatBox, targetScroll);
+To get the target:
+const chatBox1 = document.querySelectorAll("main div");
+const targetScroll = chatBox1[chatBox1.length - 2];
+This means:
+get all chat bubbles, take the second-last one (latest message from ai)
+Final
+Okay, good. I think that’s enough to create this app.
+See you in the next lesson.
+Good health and good wealth.

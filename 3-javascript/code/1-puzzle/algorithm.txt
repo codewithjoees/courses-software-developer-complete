@@ -1,0 +1,33 @@
+JavaScript Slide Puzzle Game – Complete Algorithm
+
+1. Create the HTML Structure (Tailwind CSS)
+Build the basic layout using Tailwind CSS. Define a grid container and place the puzzle images directly in the HTML or dynamically generate them later.
+
+2. Prepare Default Puzzle Positions
+Create an array that represents the correct (default) positions of all puzzle tiles.
+Loop through this array and insert each image tile into the grid based on its corresponding position.
+
+3. Add Drag-and-Drop Events
+Attach the drag-and-drop event listeners to every tile:
+dragstart, dragover, dragenter, dragleave, drop, and dragend.
+These events will allow users to drag a tile and drop it onto another.
+
+4. Swap Tiles on dragend
+Inside the dragend event handler, swap the images between the current tile and the target tile.
+This visually updates the puzzle layout.
+
+5. Restrict Illegal Moves
+Only allow swapping between tiles that are adjacent (up, down, left, or right).
+If two tiles are not neighbors, cancel the move and prevent swapping.
+
+6. Check Win Condition & Show Alert
+After each move, compare the current tile positions with the default (correct) array.
+If all tiles match the correct order, show a winning notification using SweetAlert (CDN).
+
+7. Save Game State in LocalStorage (Optional)
+Whenever a tile is moved, save the updated positions to localStorage.
+This ensures the puzzle layout is preserved even after refreshing or reopening the page.
+
+8. Replay the Game After Win
+When the SweetAlert win message appears, add a “Play Again” button.
+If the player confirms, reset all tiles to a freshly scrambled layout and start a new game session.
