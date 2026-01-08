@@ -1,3 +1,4 @@
+DONE
 <!-- 0. introduction -->
 Okay, let me demonstrate.
 As we can see, this app has three main components.
