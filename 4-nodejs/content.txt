@@ -1,0 +1,119 @@
+1️⃣ Apa itu Node.js?
+
+Node.js adalah runtime JavaScript yang memungkinkan kita menjalankan JavaScript di luar browser.
+
+🔹 Sebelum Node.js
+→ JavaScript hanya bisa jalan di browser
+
+🔹 Setelah Node.js
+→ JavaScript bisa dipakai untuk:
+
+Backend (server)
+
+CLI tools
+
+Desktop apps (Electron)
+
+Mobile application (React native, IOS) 
+
+Fullstack apps (Next.js)
+
+Have you ever wondered how a website can display data, store information, and respond to your clicks so quickly?
+All of this happens because of the collaboration between the frontend and backend.
+
+The frontend is the part that users directly see and use.
+The frontend includes:
+page appearance, layouting, inputs, buttons, , colors, and interactions.
+
+Behind the frontend is Backend
+The backend is the part that users can't see.
+when you login the backend will:
+receives the data from frontend  
+validates the data with database 
+and then send the results to the frontend.
+
+The frontend creates what user can see and sends a request, the backend receives data from the frontend , processes it, and then sends a response back.
+
+Imagine a restaurant.
+The frontend is the waiter and customer
+The backend is the chef 
+The database is the food warehouse.
+The customer orders to the waiter  
+The waiter sends the order to the chef
+the chef takes raw material food and processes it
+the chef sends food to the waiters.
+and then waiter serves 
+
+Fullstack is both the front end and the back end.
+The frontend displays.
+The backend processes.
+The two work together to create a powerful web application.
+
+NPM (Node Package Manager) is:
+A package manager for Node.js that uses to install, manage, and run libraries.
+Examples of popular packages:
+react, vite → frontend tools
+nextjs -> fullstack tools for web
+axios → HTTP/s requests
+sweetalert 
+tailwind
+
+why we don't install, manage, run, libraries using CDN ? 
+This method seems fast and practical.
+But…
+is this the best choice?
+Using a link CDN has several drawbacks.
+
+It's difficult to manage in large projects. 
+It's not suitable for React, next and modern tools.
+it's not providing bundled 
+
+But using npm is 
+Easy to manage in large projects
+It's suitable for React, next and modern tools.
+All of Libraries is being bundling and optimizing, 
+
+Bundling is the process of:
+Combining multiple JavaScript/CSS files Into one or more optimized files
+it's Performed by tools like Vite, Webpack, Rollup
+Goals of bundling:
+Smaller files
+Faster loading
+Controlled dependencies
+Tree-shaking (removing unused code)
+
+But using npm is easy to manage in large projects. Why? All dependencies or packages are neatly listed in the package.json file. With just one command, all libraries are installed immediately. 
+
+Simply put,
+with CDN = difficult to manage packages on large projects
+with npm  = easy to manage packages on large projects
+
+Imagine you're developing a large website project with many features, many teams, and many packages to support your features.
+In the first scenario, you download packages a, b, c, d, e, f, and g using a CDN.
+Visual: Downloading a CDN using script tags and links looks messy.
+Some time later, your boss asks what packages you're using. You tell them this, this, this.
+Visual: Highlight script tags that refer to packages.
+Compare this with this.
+In the second scenario, you download packages a, b, c, d, e, f, and g using npm. The download method is as follows: npm init -ythen npm a b c d e , it will generate package.json, 
+Visual: Command prompt download packages using npm, generate propreties value package on file package.json
+you can see file package.json that represents object all of packages on this project 
+Some time later, your boss asks what packages you're using. You tell them the package.json file in the properties dependencies section.
+The question is which document is neater to find out what packages are used.
+visual: compare the two: one package.json, one CDN link
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
