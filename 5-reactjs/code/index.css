@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@font-face {
+  src: url(/src/assets/font/Montserrat-SemiBold.ttf);
+  font-family: montserrat;
+}
+* {
+  font-family: montserrat;
+}
