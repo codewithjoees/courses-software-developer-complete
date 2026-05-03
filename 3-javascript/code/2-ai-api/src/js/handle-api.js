@@ -3,6 +3,8 @@ import { uiChat, uiChatLoading, uiDummy } from "./ui.js";
 import { scrollToBottom } from "./utils.js";
 
 const handleChat = async () => {
+  uiDummy();
+  return;
   const input = document.querySelector("footer input");
   const text = input.value.trim();
   const btn = document.querySelector("footer button");

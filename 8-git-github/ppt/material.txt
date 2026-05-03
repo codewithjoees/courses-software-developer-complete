@@ -1,0 +1,100 @@
+version control system : system yang meyimpan & mengelola rekaman perubahan dari source code 
+GIT : salah satu software yang bisa melakukan VCS 
+GITHUB : Website / layanan untuk mengelola project GIT 
+istilah GIT 
+REPO : folder project kita                      
+commit : rekaman / snapshot dari repo kita    
+hash : penanda unik pada sebuah commit 
+checkout : berpindah ke sebuah commit     
+branch : cabang dari sebuah commit       
+merge : menggabungkan branch                          
+remote : sumber yang memiliki repo                    
+clone: mengambil repo dari remote                 
+push : mengirimkan commit ke repo                          
+pull : mengambil commit dari repo                                          
+fork : membuat copy/duplikat dari repo orang lain (beserta history-nya)                          
+
+command prompt
+git init 
+git add .
+git status 
+git commit 
+git config --global user.email <your_email.com> , 
+git config --global user.name <your_name>
+git branch 
+git branch -d <name-branch>
+git branch =D
+git branch --merged 
+git help 
+git log 
+git log -n 5 
+git log --all --decorate --oneline --graph
+git log --author="josse"
+git log --all --pretty=format:"%h | %ae - %an | %ad | %s" --date=short
+git alias graph="git log --all --decorate --oneline --graph"
+git checkout -b <name-branch> <last-5-hash-commit>
+git merge
+git fetch 
+git pull
+git push 
+git branch -a 
+git switch -c feature-c origin/feature-c
+
+
+
+3 area pada repo git 
+working tree 
+staging area di git add 
+history di git commit 
+
+Jenis merge 
+Fast forward 
+Three-way/merge-commit 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
